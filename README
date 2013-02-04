@@ -1,8 +1,11 @@
-Florea Stefan-Razvan
-321CB
-In prima parte a temei am avut de implementat o tabela de dispersie asociativa.
-Acest lucru l-am realizat folosindu-ma de clasa MyHashMapImpl care contine un intreg,ce reprezinta numarul de Bucketuri generate, in care se vor adauga elemente, o lista in care se vor depune toate aceste Bucketuri, un intreg, initializat cu 0, ce reprezinta totalitatea elementelor adaugate in tabela, un constructor ce seteaza numarul de Bucketuri, instantiaza lista de Bucketuri si adauga in aceasta lista numBuckets Bucketuri, metodele specifice unui Map: get, put, remove,size, metoda getBuckets ce intoarce lista de Bucketuri, o metoda translate ce genereaza indicele Bucketului in lista de Bucketuri in functie de hashCodul cheii si numarului de Bucketuri folosite si doua clase interne: EntryImpl ce reprezinta intrarile in tabela alcatuite dintr-o cheie(key) si o valoare(value) si BucketImpl ce reprezinta Bucketurile din lista de Bucketuri.Aceasta ultima clasa contine o lista de in care se vor retine obiecte de tip EntryImpl.
-
-Cea de-a doua parte a temei a constat in alcatuirea unei clase Student in care am suprascris metodele hashCode si equals din clasa Object dupa un algoritm prezentat in enuntul temei si a unei clase LazyStudent in care am suprascris din nou aceste metode insa diferenta apare la suprascrierea metodei hashCode, in cazul acesta, aceasta metoda intorcand o valoare constanta intotdeauna. In clasa Main am generat aleator 2000 de Student si 2000 de LazyStudent pe care le-am adaugat in doua tabele de dispersie de tipul celei implementate anterior.
-
-La accesarea a unui numar de 1000 de studenti din cele doua tabele de dispersie s-a constatat ca in cazul obiectelor de tip Student accesarea se realizeaza intr-un mod mult mai rapid datorita eficientei tabelei de dispersie. In cazul obiectelor de tip LazyStudent, datorita metodei hashCode care intoarce intotdeauna aceeasi valoare, metoda translate va intoarce intotdeauna aceeasi valoare, astfel adaugandu-se toate obiectele in acelasi Bucket.Astfel, accesarea este mai dificila.
+This little project contains my own hashmap implementation in java
+programming language. After creating the specific methods and data
+structures for a hashmap I created to classes "Student" and 
+"LazyStudent" with the method for hashing different. In Student
+the function which calculates the hash is a specialized one while
+in "LazyStudent" the function is always returning a constant value.
+I did this to see the performance gived by a good hashmap. 
+In main I added 2000 of "Student" objects and 2000 of "LazyStudent"
+objects and when I tryed to access its, the difference in 
+performance was much better for the objects  added with a good
+function for calculating the hash number.

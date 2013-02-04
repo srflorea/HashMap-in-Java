@@ -1,7 +1,7 @@
 This little project contains my own hashmap implementation in java
 programming language. After creating the specific methods and data
-structures for a hashmap I created to classes "Student" and 
-"LazyStudent" with the method for hashing different. In Student
+structures for a hashmap I created two classes "Student" and 
+"LazyStudent" with the method for hashing different. In "Student"
 the function which calculates the hash is a specialized one while
 in "LazyStudent" the function is always returning a constant value.
 I did this to see the performance gived by a good hashmap. 
